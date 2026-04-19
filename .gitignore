@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project outputs (keep structure, ignore heavy artifacts)
+outputs/models/**/*
+!outputs/models/.gitkeep
+outputs/predictions/**/*
+!outputs/predictions/.gitkeep
+outputs/reports/**/*
+!outputs/reports/.gitkeep
+outputs/figures/**/*
+!outputs/figures/.gitkeep
+
+# Dataset (user downloads MVTec AD separately)
+data/mvtec/**/*
+!data/mvtec/.gitkeep
+
+# Lightning / Anomalib
+lightning_logs/
+results/

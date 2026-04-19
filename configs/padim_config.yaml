@@ -1,0 +1,35 @@
+# PaDiM training / evaluation defaults (paths can be overridden via CLI)
+project:
+  root: .
+  seed: 42
+
+data:
+  # MVTec AD root containing category folders (bottle, cable, ...)
+  mvtec_root: data/mvtec
+  category: bottle
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 4
+
+model:
+  name: Padim
+  backbone: resnet18
+  layers:
+    - layer1
+    - layer2
+    - layer3
+  pre_trained: true
+  n_features: null  # use Anomalib defaults per backbone
+
+preprocess:
+  image_size: [256, 256]
+
+trainer:
+  accelerator: auto
+  devices: 1
+  default_root_dir: outputs/models/padim
+
+thresholds:
+  # Optional manual image-level threshold on RAW anomaly scores (before normalization).
+  # If null, rely on adaptive threshold from validation (stored in checkpoint).
+  manual_image_score_threshold: null

@@ -1,0 +1,32 @@
+# PatchCore baseline configuration
+project:
+  root: .
+  seed: 42
+
+data:
+  mvtec_root: data/mvtec
+  category: bottle
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 4
+
+model:
+  name: Patchcore
+  backbone: wide_resnet50_2
+  layers:
+    - layer2
+    - layer3
+  pre_trained: true
+  coreset_sampling_ratio: 0.1
+  num_neighbors: 9
+
+preprocess:
+  image_size: [256, 256]
+
+trainer:
+  accelerator: auto
+  devices: 1
+  default_root_dir: outputs/models/patchcore
+
+thresholds:
+  manual_image_score_threshold: null
