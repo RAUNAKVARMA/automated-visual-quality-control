@@ -13,6 +13,13 @@ env/
 dist/
 build/
 
+# Tools / env
+.env
+.envrc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
 # Jupyter
 .ipynb_checkpoints/
 

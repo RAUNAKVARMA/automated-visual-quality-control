@@ -1,6 +1,10 @@
 # Automated visual quality control
 
-Research-oriented **industrial anomaly detection** using the **MVTec AD** benchmark, **Anomalib** models (**PaDiM** primary, **PatchCore** baseline), and a **Streamlit** frontend for interactive inspection.
+AI-based defect detection for automated visual inspection using **computer vision** and **anomaly detection** (not plain binary classification on labeled defects).
+
+Research-oriented **industrial anomaly detection** on the **MVTec AD** benchmark, **Anomalib** models (**PaDiM** primary, **PatchCore** baseline), and a **Streamlit** frontend for interactive inspection.
+
+Repository: [github.com/RAUNAKVARMA/automated-visual-quality-control](https://github.com/RAUNAKVARMA/automated-visual-quality-control)
 
 ## Features
 
@@ -134,4 +138,4 @@ python -m pytest tests/test_inference.py
 
 ## License
 
-This project code is provided as a template for research and demos. **MVTec AD** has its own license; do not redistribute the dataset from this repository.
+Project code is under the [MIT License](LICENSE). **MVTec AD** has its own license; do not redistribute the dataset from this repository.
